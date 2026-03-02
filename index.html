@@ -88,6 +88,27 @@
         margin-left: -20px;              /* stronger on desktop */
     }
 }
+        /* Better controlled left shift for navbar-brand (your name + subtitle) */
+.navbar-brand {
+    padding-left: 0.5rem !important;     /* keep a tiny bit of breathing room */
+}
+
+/* Subtle left shift — stronger on desktop, very gentle on mobile */
+.navbar-brand {
+    margin-left: -8px;                   /* safe default for small screens */
+}
+
+@media (min-width: 576px) {              /* from small tablets up */
+    .navbar-brand {
+        margin-left: -12px;
+    }
+}
+
+@media (min-width: 992px) {              /* desktop and larger */
+    .navbar-brand {
+        margin-left: -18px;              /* or -20px if you liked the previous feel */
+    }
+}
 </style>
 </head>
 <body>
