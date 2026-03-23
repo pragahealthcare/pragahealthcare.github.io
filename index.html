@@ -37,21 +37,26 @@
         background-color: #f8f9fa; 
         color: #333; 
         font-family: 'Arial', sans-serif; 
-        line-height: 1.6;           /* ← added for better readability */
+        line-height: 1.6;           /* added for better readability */
     }
+
     .navbar, footer { 
         background-color: #0056b3; 
     }
+
     .navbar-brand, .nav-link { 
         color: white !important; 
     }
+
     .section-padding { 
         padding: 60px 0; 
     }
+
     .profile-img { 
         max-width: 300px; 
         border-radius: 50%; 
     }
+
     footer { 
         background-color: #006d77; 
         color: white; 
@@ -59,81 +64,66 @@
         text-align: center; 
     }
 
-    /* ── New / Updated rules for your requests ── */
-
-    /* 1. Larger text in About, Interests, Procedures sections */
+    /* ── Larger text in relevant sections ── */
     #about p,
     #interests p,
     #interests .list-group-item,
     #interests h3 + .list-group .list-group-item {
-        font-size: 1.25rem;          /* was ~1rem → now slightly larger */
+        font-size: 1.25rem;
     }
 
-    /* 2. Tighter spacing between bullet points */
+    /* ── Tighter bullet spacing (for older list-group version if still used anywhere) ── */
     #interests .list-group-item,
     #interests h3 + .list-group .list-group-item {
-        padding: 0.35rem 1.25rem;   /* reduced vertical padding (was ~0.75rem) */
-        margin-bottom: 0;           /* ensure no extra margin */
+        padding: 0.35rem 1.25rem;
+        margin-bottom: 0;
     }
 
-    /* Optional: make sure list-group has no extra bottom margin after last item */
     #interests .list-group {
         margin-bottom: 1.5rem;
     }
-/* Clean, tight bullet lists for Special Interests & Procedures */
-#interests .compact-list {
-    list-style-type: disc;          /* standard bullets – change to 'circle' or 'square' if preferred */
-    padding-left: 1.4rem;           /* controls how far bullets are indented */
-    margin-bottom: 1.8rem;          /* space after the whole list */
-}
 
-#interests .compact-list li {
-    font-size: 1.25rem;             /* matches your larger text preference */
-    margin-bottom: 0.35rem;         /* tight vertical spacing between items – adjust if needed (0.25–0.5rem range) */
-    line-height: 1.4;               /* slightly tighter line height for lists */
-}
-
-/* Optional: remove default left padding/margin Bootstrap might add */
-#interests ul {
-    margin-left: 0;
-    padding-left: 1.4rem;
-}
-.navbar-nav .nav-link {
-    font-size: 1.2rem;               /* adjust this value: 1.1rem = subtle, 1.3rem = quite big */
-}
-/* Shift name + subtitle slightly left in the header */
-.navbar-brand {
-    padding-left: 0 !important;          /* remove default left padding if any */
-    margin-left: -30px;                  /* ← main shift left – try -10px to -25px */
-}
-
-/* Optional: fine-tune only on larger screens so it doesn't hug the edge on mobile */
-@media (min-width: 992px) {
-    .navbar-brand {
-        margin-left: -20px;              /* stronger on desktop */
+    /* ── Clean, tight bullet lists for Special Interests & Procedures ── */
+    #interests .compact-list {
+        list-style-type: disc;
+        padding-left: 1.4rem;
+        margin-bottom: 1.8rem;
     }
-}
-/* Better controlled left shift for navbar-brand (your name + subtitle) */
-.navbar-brand {
-    padding-left: 0.5rem !important;     /* keep a tiny bit of breathing room */
-}
 
-/* Subtle left shift — stronger on desktop, very gentle on mobile */
-.navbar-brand {
-    margin-left: -8px;                   /* safe default for small screens */
-}
-
-@media (min-width: 576px) {              /* from small tablets up */
-    .navbar-brand {
-        margin-left: -12px;
+    #interests .compact-list li {
+        font-size: 1.25rem;
+        margin-bottom: 0.35rem;
+        line-height: 1.4;
     }
-}
 
-@media (min-width: 992px) {              /* desktop and larger */
-    .navbar-brand {
-        margin-left: -18px;              /* or -20px if you liked the previous feel */
+    #interests ul {
+        margin-left: 0;
+        padding-left: 1.4rem;
     }
-}
+
+    /* ── Navbar link size ── */
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+
+    /* ── Consolidated navbar-brand positioning ── 
+       Gentle on mobile → stronger shift on desktop */
+    .navbar-brand {
+        padding-left: 0.5rem !important;     /* small breathing room on all sizes */
+        margin-left: -8px;                   /* safe default for small screens */
+    }
+
+    @media (min-width: 576px) {              /* small tablets and up */
+        .navbar-brand {
+            margin-left: -12px;
+        }
+    }
+
+    @media (min-width: 992px) {              /* desktop and larger */
+        .navbar-brand {
+            margin-left: -18px;              /* adjust to -20px if you want it slightly stronger */
+        }
+    }
 </style>
 </head>
 <body>
@@ -215,7 +205,7 @@
         </div>
     </section>
 
-     <!-- Locations Section -->
+   <!-- Locations Section -->
 <section id="locations" class="section-padding">
     <div class="container">
         <h2>Where I Practice and Bookings</h2>
@@ -279,7 +269,6 @@
         </div>
     </div>
 </section>
-
 
     <!-- Blog Section -->
     <section id="blog" class="section-padding bg-light">
